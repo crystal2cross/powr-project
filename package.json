@@ -1,0 +1,27 @@
+{
+  "name": "powr-project",
+  "version": "0.0.1",
+  "description": "powr coding challenge",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crystal2cross/powr-project.git"
+  },
+  "keywords": [
+    "sass",
+    "grunt",
+    "autoprefixer"
+  ],
+  "author": "Crystal Cross",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crystal2cross/powr-project/issues"
+  },
+  "homepage": "https://github.com/crystal2cross/powr-project#readme",
+  "devDependencies": {
+    "grunt": "^1.0.0",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
