@@ -1,0 +1,21 @@
+*:focus {
+  outline: none;
+}
+
+.button {
+	padding: .5em 2.5em;
+	&.style1 {
+		@include button-outline($granny-smith-apple, $tree-poppy);
+		@include breakpoint(50){
+			font-size: 1.2em;
+			padding: .5em 2.5em;
+		}
+	}
+	&.style2 {
+		@include button-solid($granny-smith-apple, $tree-poppy);
+		@include breakpoint(50){
+			font-size: 1.5em;
+			padding: .5em 2em;
+		}
+	}
+}

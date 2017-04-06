@@ -1,0 +1,54 @@
+@mixin roundedCorners($size){
+    border-radius: $size + em;
+}
+
+@mixin roundedCornersMixed($top-left, $top-right, $bottom-left, $bottom-right){
+    border-top-left-radius: $top-left + em;
+    border-top-right-radius: $top-right + em;
+    border-bottom-left-radius: $bottom-left + em;
+    border-bottom-right-radius: $bottom-right + em;
+}
+
+@mixin breakpoint($size) {
+    @media only screen and (min-width : $size + em) { @content; }
+}
+
+%button {
+    @include roundedCorners(1.2);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+}
+
+@mixin button-solid($color, $hover-color) {
+    @extend %button;
+    @include breakpoint(50){ @include roundedCorners(.8); }
+    background-color: $color;
+    border: solid 2px $color;
+    color: #fff;
+    &:hover, &:focus {
+        background-color: $hover-color;
+        border: solid 2px $hover-color;
+        color: #fff;
+    }
+    &:visited {
+        color: #fff;
+    }
+}
+
+@mixin button-outline($color, $hover-color) {
+    @extend %button;
+    background-color: $white;
+    border: solid 2px $color;
+    color: $color;
+    &:hover, &:focus {
+        border: solid 2px $hover-color;
+        color: $hover-color;
+    }
+    &:visited {
+        color: $color;
+    }
+}
