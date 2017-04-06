@@ -3,19 +3,27 @@
 }
 
 .button {
-	padding: .5em 2.5em;
+
 	&.style1 {
 		@include button-outline($granny-smith-apple, $tree-poppy);
-		@include breakpoint(50){
-			font-size: 1.2em;
+
+		@include breakpoint(50) {
 			padding: .5em 2.5em;
+			margin: 0;
 		}
 	}
+
 	&.style2 {
 		@include button-solid($granny-smith-apple, $tree-poppy);
-		@include breakpoint(50){
+
+		@include breakpoint(50) {
 			font-size: 1.5em;
 			padding: .5em 2em;
+			margin: 0;
 		}
 	}
+	
+	padding: .5em 3em;
+	font-size: 1.2em;
+	margin-bottom: 2em;
 }

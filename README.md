@@ -4,4 +4,4 @@
 * Install Grunt
 * Perform `npm install` in the root dir
 * Run `grunt`
-* You are ready to go!
+* Open index.html in your browser and you are ready to go!

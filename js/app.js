@@ -25,11 +25,15 @@ var plan3 = new PricingPlan({
 var data = [plan1, plan2, plan3];
 
 $(document).ready(function(){
+
 	for( var i = 0; i < data.length; ++i ) {
+
 		$(".plan-name:eq( " + i + " )").prepend(data[i].name);
 		$(".plan-price:eq( " + i + " )").prepend(data[i].price);
 	    $(".plan-features:eq( " + i + " ) > .feature-1").prepend("<b>" + data[i].features[0] + "</b> ");
 	    $(".plan-features:eq( " + i + " ) > .feature-2").prepend("<b>" + data[i].features[1] + "</b> ");
 	    $(".plan-features:eq( " + i + " ) > .feature-3").prepend("<b>" + data[i].features[2] + "</b> ");
+	    
 	}
+
 });
